@@ -3,7 +3,7 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            madi-lts
+title:            'madi-lts'
 tagline:          'Project Blog'
 description:      'A place for thoughts and projects.'
 url:              https://madi-lts.github.io
