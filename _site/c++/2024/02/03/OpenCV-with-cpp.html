@@ -276,7 +276,31 @@
 Note that the controls above allow us to pan, zoom, save, and copy the image to the clipboard.</p>
 
 <h2 id="cuda">CUDA</h2>
-<p>W</p>
+<p>To integrate OpenCV with CUDA code, we could use the <code class="language-plaintext highlighter-rouge">nvcc</code> compiler and pass the same options as before:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvcc main.cu `pkg-config --cflags opencv4` `pkg-config --libs opencv4`
+</code></pre></div></div>
+<p>But since we also have a large amount of CPU only code, the proper way to develop here is to compile the CUDA code with <code class="language-plaintext highlighter-rouge">nvcc</code> into a library:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvcc -c cuda_code.cu
+</code></pre></div></div>
+<p>This will generate <code class="language-plaintext highlighter-rouge">cuda_code.o</code>, which we can then link using <code class="language-plaintext highlighter-rouge">g++</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ -o program `pkg-config --cflags opencv4` `pkg-config --libs opencv4 cuda cudart` cuda_code.o main.cpp  
+</code></pre></div></div>
+<p>To streamline this process, use a Make. Create a file named <code class="language-plaintext highlighter-rouge">makefile</code>:</p>
+<div class="language-make highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">all</span><span class="o">:</span> <span class="nf">program</span>
+
+<span class="nl">program</span><span class="o">:</span> <span class="nf">cuda_code.o</span>
+    <span class="err">g++</span> <span class="err">-o</span> <span class="err">program</span> <span class="err">`pkg-config</span> <span class="err">--cflags</span> <span class="err">opencv4`</span> <span class="err">`pkg-config</span> <span class="err">--libs</span> <span class="err">opencv4</span> <span class="err">cuda</span> <span class="err">cudart`</span> <span class="err">cuda_code.o</span> <span class="err">main.cpp</span> <span class="err">-I.</span>
+
+<span class="nl">cuda_code.o</span><span class="o">:</span>
+    <span class="err">nvcc</span> <span class="err">-c</span> <span class="err">cuda_code.cu</span>
+
+<span class="nl">clean</span><span class="o">:</span>
+    <span class="err">rm</span> <span class="err">-f</span> <span class="err">*.o</span> <span class="err">program</span>
+
+</code></pre></div></div>
+<p>The indentation in the <code class="language-plaintext highlighter-rouge">makefile</code> must be done with tabs, and every line must have an end of line character. 
+So make sure to convert spaces to tabs in your text editor. Also note the <code class="language-plaintext highlighter-rouge">-I.</code> flag which tells <code class="language-plaintext highlighter-rouge">g++</code> to look
+in the current directory.</p>
 
     
 
