@@ -70,6 +70,8 @@
 
 
   
+    
+  
 
   
     
@@ -83,10 +85,6 @@
   
 
   
-    
-  
-
-  
 
   
     
@@ -105,23 +103,16 @@
   
 
   
-    
-  
 
 
   
 
-
-  
 
   
     
   
 
   
-    
-      <a class="category-link "
-          href="/category/data-science.html">Data Science</a>
     
   
 
@@ -153,8 +144,6 @@
     
   
 
-  
-    
   
 
 
@@ -210,7 +199,7 @@
 </nav>
 
   <p>
-  &copy; 2020.
+  &copy; 2024.
   <a href="/LICENSE.md">MIT License.</a>
 </p>
 
@@ -232,9 +221,7 @@
       
 
       
-        <a href="/category/data-science.html">
-          Data Science
-        </a>
+        data science
       
     
   </span>
@@ -284,7 +271,7 @@
 
 <p>with Einstein summation over the spatial indices \(i\).</p>
 
-<p>Let’s see how this model performs using <code class="highlighter-rouge">lmfit</code> to fit some clustered data generated with <code class="highlighter-rouge">scikit-learn</code>:</p>
+<p>Let’s see how this model performs using <code class="language-plaintext highlighter-rouge">lmfit</code> to fit some clustered data generated with <code class="language-plaintext highlighter-rouge">scikit-learn</code>:</p>
 
 <table>
   <thead>
@@ -336,16 +323,36 @@
   <section class="comments">
     <h2>Comments</h2>
     
-  <p>
-    You are seeing this because your Disqus shortname is not properly set. To
-    configure Disqus, you should edit your <code>_config.yml</code> to include
-    either a <code>disqus.shortname</code> variable.
-  </p>
+  <div id="disqus_thread">
+    <button class="disqus-load" onClick="loadDisqusComments()">
+      Load Comments
+    </button>
+  </div>
+  <script>
 
-  <p>
-    If you do not wish to use Disqus, override the
-    <code>comments.html</code> partial for this theme.
-  </p>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW
+  *  TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:s
+  *  https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/data%20science/2020/04/28/Logistic-Regression.html";
+    this.page.identifier = "" ||
+                           "http://localhost:4000/data%20science/2020/04/28/Logistic-Regression.html";
+  }
+  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//madi_lts.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
+  </noscript>
+
 
 
   </section>
@@ -353,6 +360,15 @@
   <section class="related">
   <h2>Related Posts</h2>
   <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/linux/2024/02/03/Arch-Linux-Installation.html">
+            Arch Linux Installation
+            <small>03 Feb 2024</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -368,15 +384,6 @@
           <a href="/2020/04/24/MathJax.html">
             MathJax setup
             <small>24 Apr 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2020/04/23/Jekyll.html">
-            Jekyll and Hyde(out) setup
-            <small>23 Apr 2020</small>
           </a>
         </h3>
       </li>

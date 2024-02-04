@@ -70,6 +70,8 @@
 
 
   
+    
+  
 
   
     
@@ -83,10 +85,6 @@
   
 
   
-    
-  
-
-  
 
   
     
@@ -105,23 +103,16 @@
   
 
   
-    
-  
 
 
   
 
-
-  
 
   
     
   
 
   
-    
-      <a class="category-link "
-          href="/category/data-science.html">Data Science</a>
     
   
 
@@ -153,8 +144,6 @@
     
   
 
-  
-    
   
 
 
@@ -210,7 +199,7 @@
 </nav>
 
   <p>
-  &copy; 2020.
+  &copy; 2024.
   <a href="/LICENSE.md">MIT License.</a>
 </p>
 
@@ -232,9 +221,7 @@
       
 
       
-        <a href="/category/data-science.html">
-          Data Science
-        </a>
+        data science
       
     
   </span>
@@ -242,7 +229,7 @@
 
 
   <div class="post-body">
-    <p>Jupyter <code class="highlighter-rouge">sys.executable</code> should return the path to your Anaconda version of python: <code class="highlighter-rouge">'/Users/madi/opt/anaconda3/bin/python'</code>. If it doesn’t, there are probably overriding Jupyter kernels. In the terminal, run:</p>
+    <p>Jupyter <code class="language-plaintext highlighter-rouge">sys.executable</code> should return the path to your Anaconda version of python: <code class="language-plaintext highlighter-rouge">'/Users/madi/opt/anaconda3/bin/python'</code>. If it doesn’t, there are probably overriding Jupyter kernels. In the terminal, run:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">jupyter kernelspec list
 python2             	/Users/madi/Library/Jupyter/kernels/python2
@@ -253,7 +240,7 @@ python3             	/Users/madi/Library/Jupyter/kernels/python3</code></pre></f
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">jupyter kernelspec uninstall python2
 jupyter kernelspec uninstall python3</code></pre></figure>
 
-<p>Now <code class="highlighter-rouge">sys.executable</code> should return the path to your Anaconda version of python.</p>
+<p>Now <code class="language-plaintext highlighter-rouge">sys.executable</code> should return the path to your Anaconda version of python.</p>
 
     
 
@@ -290,16 +277,36 @@ jupyter kernelspec uninstall python3</code></pre></figure>
   <section class="comments">
     <h2>Comments</h2>
     
-  <p>
-    You are seeing this because your Disqus shortname is not properly set. To
-    configure Disqus, you should edit your <code>_config.yml</code> to include
-    either a <code>disqus.shortname</code> variable.
-  </p>
+  <div id="disqus_thread">
+    <button class="disqus-load" onClick="loadDisqusComments()">
+      Load Comments
+    </button>
+  </div>
+  <script>
 
-  <p>
-    If you do not wish to use Disqus, override the
-    <code>comments.html</code> partial for this theme.
-  </p>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW
+  *  TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:s
+  *  https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/data%20science/2020/04/28/Jupyter-Kernels.html";
+    this.page.identifier = "" ||
+                           "http://localhost:4000/data%20science/2020/04/28/Jupyter-Kernels.html";
+  }
+  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//madi_lts.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
+  </noscript>
+
 
 
   </section>
@@ -307,6 +314,15 @@ jupyter kernelspec uninstall python3</code></pre></figure>
   <section class="related">
   <h2>Related Posts</h2>
   <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/linux/2024/02/03/Arch-Linux-Installation.html">
+            Arch Linux Installation
+            <small>03 Feb 2024</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -322,15 +338,6 @@ jupyter kernelspec uninstall python3</code></pre></figure>
           <a href="/2020/04/24/MathJax.html">
             MathJax setup
             <small>24 Apr 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2020/04/23/Jekyll.html">
-            Jekyll and Hyde(out) setup
-            <small>23 Apr 2020</small>
           </a>
         </h3>
       </li>

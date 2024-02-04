@@ -66,6 +66,8 @@
 
 
   
+    
+  
 
   
     
@@ -79,10 +81,6 @@
   
 
   
-    
-  
-
-  
 
   
     
@@ -101,23 +99,16 @@
   
 
   
-    
-  
 
 
   
 
-
-  
 
   
     
   
 
   
-    
-      <a class="category-link "
-          href="/category/data-science.html">Data Science</a>
     
   
 
@@ -149,8 +140,6 @@
     
   
 
-  
-    
   
 
 
@@ -206,7 +195,7 @@
 </nav>
 
   <p>
-  &copy; 2020.
+  &copy; 2024.
   <a href="/LICENSE.md">MIT License.</a>
 </p>
 
@@ -230,7 +219,7 @@
 
 <p>First, you’ll need to install Ruby, and make sure you have &gt;2.5.0. Use <a href="https://github.com/rbenv/rbenv">rbenv</a> if you need to manage multiple Ruby versions:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Install rbenv and ruby-build
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Install rbenv and ruby-build
 brew install rbenv
 
 # Set up rbenv integration with your shell
@@ -246,23 +235,23 @@ rbenv global 2.7.1
 
 <p>Now install Jekyll and Bundler</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install --user-install bundler jekyll
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install --user-install bundler jekyll
 </code></pre></div></div>
 
 <p>Get your ruby version</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
 ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c)
 </code></pre></div></div>
 
-<p>and add it to your path by adding the following to your shell configuration file, <code class="highlighter-rouge">.bash_profile</code> or otherwise:</p>
+<p>and add it to your path by adding the following to your shell configuration file, <code class="language-plaintext highlighter-rouge">.bash_profile</code> or otherwise:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"
 </code></pre></div></div>
 
 <p>Finally, install Jekyll and Bundler:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install --user-install bundler jekyll
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install --user-install bundler jekyll
 </code></pre></div></div>
 
 <h2 id="theme-setup">Theme Setup</h2>
@@ -271,16 +260,16 @@ ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c)
 
 <p>In your project directory, create a Gemfile:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle init
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle init
 </code></pre></div></div>
 
-<p>For Hydeout add <code class="highlighter-rouge">jekyll-pageinate</code>, <code class="highlighter-rouge">jekyll-gist</code> and <code class="highlighter-rouge">jekyll-feed</code> to your Gemfile and run <code class="highlighter-rouge">bundle install</code> and <code class="highlighter-rouge">bundle update</code> to install everything.</p>
+<p>For Hydeout add <code class="language-plaintext highlighter-rouge">jekyll-pageinate</code>, <code class="language-plaintext highlighter-rouge">jekyll-gist</code> and <code class="language-plaintext highlighter-rouge">jekyll-feed</code> to your Gemfile and run <code class="language-plaintext highlighter-rouge">bundle install</code> and <code class="language-plaintext highlighter-rouge">bundle update</code> to install everything.</p>
 
-<p>Finally, to get Hydeout to work live, change your <code class="highlighter-rouge">baseurl:</code> to <code class="highlighter-rouge">http://[username].github.io</code> if you’re using Github pages, or the correct domain name otherwise.</p>
+<p>Finally, to get Hydeout to work live, change your <code class="language-plaintext highlighter-rouge">baseurl:</code> to <code class="language-plaintext highlighter-rouge">http://[username].github.io</code> if you’re using Github pages, or the correct domain name otherwise.</p>
 
 <p>You should now be able to build and run with Jekyll:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
 jekyll serve
 </code></pre></div></div>
 
@@ -299,16 +288,36 @@ jekyll serve
   <section class="comments">
     <h2>Comments</h2>
     
-  <p>
-    You are seeing this because your Disqus shortname is not properly set. To
-    configure Disqus, you should edit your <code>_config.yml</code> to include
-    either a <code>disqus.shortname</code> variable.
-  </p>
+  <div id="disqus_thread">
+    <button class="disqus-load" onClick="loadDisqusComments()">
+      Load Comments
+    </button>
+  </div>
+  <script>
 
-  <p>
-    If you do not wish to use Disqus, override the
-    <code>comments.html</code> partial for this theme.
-  </p>
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW
+  *  TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:s
+  *  https://disqus.com/admin/universalcode/#configuration-variables
+  */
+  var disqus_config = function () {
+    this.page.url = "http://localhost:4000/2020/04/23/Jekyll.html";
+    this.page.identifier = "" ||
+                           "http://localhost:4000/2020/04/23/Jekyll.html";
+  }
+  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//madi_lts.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
+  </noscript>
+
 
 
   </section>
@@ -316,6 +325,15 @@ jekyll serve
   <section class="related">
   <h2>Related Posts</h2>
   <ul class="posts-list">
+    
+      <li>
+        <h3>
+          <a href="/linux/2024/02/03/Arch-Linux-Installation.html">
+            Arch Linux Installation
+            <small>03 Feb 2024</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -331,15 +349,6 @@ jekyll serve
           <a href="/data%20science/2020/04/28/Jupyter-Kernels.html">
             Jupyter Kernel
             <small>28 Apr 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2020/04/24/MathJax.html">
-            MathJax setup
-            <small>24 Apr 2020</small>
           </a>
         </h3>
       </li>

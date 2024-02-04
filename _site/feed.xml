@@ -1,102 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-01T14:38:19-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Madison Anderson</title><subtitle>A place for thoughts and projects.</subtitle><author><name>Madison Anderson</name></author><entry><title type="html">Jupyter Kernel</title><link href="http://localhost:4000/data%20science/2020/04/28/Jupyter-Kernels.html" rel="alternate" type="text/html" title="Jupyter Kernel" /><published>2020-04-28T00:00:00-04:00</published><updated>2020-04-28T00:00:00-04:00</updated><id>http://localhost:4000/data%20science/2020/04/28/Jupyter-Kernels</id><content type="html" xml:base="http://localhost:4000/data%20science/2020/04/28/Jupyter-Kernels.html">&lt;p&gt;Jupyter &lt;code class=&quot;highlighter-rouge&quot;&gt;sys.executable&lt;/code&gt; should return the path to your Anaconda version of python: &lt;code class=&quot;highlighter-rouge&quot;&gt;'/Users/madi/opt/anaconda3/bin/python'&lt;/code&gt;. If it doesn’t, there are probably overriding Jupyter kernels. In the terminal, run:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-03T19:47:38-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Madison Anderson</title><subtitle>A place for thoughts and projects.</subtitle><author><name>MJ Anderson</name></author><entry><title type="html">Arch Linux Installation</title><link href="http://localhost:4000/linux/2024/02/03/Arch-Linux-Installation.html" rel="alternate" type="text/html" title="Arch Linux Installation" /><published>2024-02-03T00:00:00-05:00</published><updated>2024-02-03T00:00:00-05:00</updated><id>http://localhost:4000/linux/2024/02/03/Arch-Linux-Installation</id><content type="html" xml:base="http://localhost:4000/linux/2024/02/03/Arch-Linux-Installation.html"><![CDATA[<p>Recently I switched from Windows back to linux for various C++ and CUDA development purposes. For a distro, I chose Arch, which I ended up installing on both my desktop and laptop. Here is my manual installation procedure, and current setup with Gnome 45</p>]]></content><author><name>MJ Anderson</name></author><category term="linux" /><category term="arch," /><category term="linux," /><category term="gnome" /><summary type="html"><![CDATA[Recently I switched from Windows back to linux for various C++ and CUDA development purposes. For a distro, I chose Arch, which I ended up installing on both my desktop and laptop. Here is my manual installation procedure, and current setup with Gnome 45]]></summary></entry><entry><title type="html">Jupyter Kernel</title><link href="http://localhost:4000/data%20science/2020/04/28/Jupyter-Kernels.html" rel="alternate" type="text/html" title="Jupyter Kernel" /><published>2020-04-28T00:00:00-05:00</published><updated>2020-04-28T00:00:00-05:00</updated><id>http://localhost:4000/data%20science/2020/04/28/Jupyter-Kernels</id><content type="html" xml:base="http://localhost:4000/data%20science/2020/04/28/Jupyter-Kernels.html"><![CDATA[<p>Jupyter <code class="language-plaintext highlighter-rouge">sys.executable</code> should return the path to your Anaconda version of python: <code class="language-plaintext highlighter-rouge">'/Users/madi/opt/anaconda3/bin/python'</code>. If it doesn’t, there are probably overriding Jupyter kernels. In the terminal, run:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jupyter kernelspec list
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">jupyter kernelspec list
 python2             	/Users/madi/Library/Jupyter/kernels/python2
-python3             	/Users/madi/Library/Jupyter/kernels/python3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+python3             	/Users/madi/Library/Jupyter/kernels/python3</code></pre></figure>
 
-&lt;p&gt;Tell Jupyter to look for the Anaconda kernels by uninstalling the overriding kernels:&lt;/p&gt;
+<p>Tell Jupyter to look for the Anaconda kernels by uninstalling the overriding kernels:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jupyter kernelspec uninstall python2
-jupyter kernelspec uninstall python3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">jupyter kernelspec uninstall python2
+jupyter kernelspec uninstall python3</code></pre></figure>
 
-&lt;p&gt;Now &lt;code class=&quot;highlighter-rouge&quot;&gt;sys.executable&lt;/code&gt; should return the path to your Anaconda version of python.&lt;/p&gt;</content><author><name>Madison Anderson</name></author><category term="data science" /><category term="environment" /><category term="management" /><summary type="html">Jupyter sys.executable should return the path to your Anaconda version of python: '/Users/madi/opt/anaconda3/bin/python'. If it doesn’t, there are probably overriding Jupyter kernels. In the terminal, run:</summary></entry><entry><title type="html">Logistic Regression</title><link href="http://localhost:4000/data%20science/2020/04/28/Logistic-Regression.html" rel="alternate" type="text/html" title="Logistic Regression" /><published>2020-04-28T00:00:00-04:00</published><updated>2020-04-28T00:00:00-04:00</updated><id>http://localhost:4000/data%20science/2020/04/28/Logistic-Regression</id><content type="html" xml:base="http://localhost:4000/data%20science/2020/04/28/Logistic-Regression.html">&lt;p&gt;Consider a binary classification problem where we have data consisting of 3 parameters, \(\{(x,y,z)_i\}\), and a binary variable \(q_i\), taking values of 0 or 1, where \(i\) takes values 1 to \(n\). For example, \((x,y,z)_j\) might represent the location of the \(j\)th person in an apartment complex and \(q_j\) might represent whether or not they test positive for an infectious disease. The data may be clustered or grouped with respect to the category, or it may not. Below is an example where the data exhibit two clusters:&lt;/p&gt;
+<p>Now <code class="language-plaintext highlighter-rouge">sys.executable</code> should return the path to your Anaconda version of python.</p>]]></content><author><name>MJ Anderson</name></author><category term="data science" /><category term="environment" /><category term="management" /><summary type="html"><![CDATA[Jupyter sys.executable should return the path to your Anaconda version of python: '/Users/madi/opt/anaconda3/bin/python'. If it doesn’t, there are probably overriding Jupyter kernels. In the terminal, run:]]></summary></entry><entry><title type="html">Logistic Regression</title><link href="http://localhost:4000/data%20science/2020/04/28/Logistic-Regression.html" rel="alternate" type="text/html" title="Logistic Regression" /><published>2020-04-28T00:00:00-05:00</published><updated>2020-04-28T00:00:00-05:00</updated><id>http://localhost:4000/data%20science/2020/04/28/Logistic-Regression</id><content type="html" xml:base="http://localhost:4000/data%20science/2020/04/28/Logistic-Regression.html"><![CDATA[<p>Consider a binary classification problem where we have data consisting of 3 parameters, \(\{(x,y,z)_i\}\), and a binary variable \(q_i\), taking values of 0 or 1, where \(i\) takes values 1 to \(n\). For example, \((x,y,z)_j\) might represent the location of the \(j\)th person in an apartment complex and \(q_j\) might represent whether or not they test positive for an infectious disease. The data may be clustered or grouped with respect to the category, or it may not. Below is an example where the data exhibit two clusters:</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2d-category-data.png&quot; alt=&quot;2D classification data&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2d-category-data.png" alt="2D classification data" /></p>
 
-&lt;p&gt;A human can easily make a qualitative judgement and draw a line (or a plane) separating the infected and uninfected clusters. We would like to see if we can let our computer do this through a fitting routine.&lt;/p&gt;
+<p>A human can easily make a qualitative judgement and draw a line (or a plane) separating the infected and uninfected clusters. We would like to see if we can let our computer do this through a fitting routine.</p>
 
-&lt;p&gt;A plane may be specified by a normal unit vector \(\hat{\mathbf{n}}\) and a point \(\mathbf{p}\). Every point \(\mathbf{r}\) in the plane satisfies&lt;/p&gt;
+<p>A plane may be specified by a normal unit vector \(\hat{\mathbf{n}}\) and a point \(\mathbf{p}\). Every point \(\mathbf{r}\) in the plane satisfies</p>
 
 \[\hat{\mathbf{n}}\cdot(\mathbf{r}-\mathbf{p}) = 0.\]
 
-&lt;p&gt;Since there are infinite choices for \(\mathbf{p}\), and \(\mathbf{r}\) is arbitrary, \((\mathbf{r}-\mathbf{p})\) could be any vector in the plane, and then this simply says that any vector lying in the plane must be perpendicular to \(\hat{\mathbf{n}}\). But most importantly for points to one side of the plane, we have&lt;/p&gt;
+<p>Since there are infinite choices for \(\mathbf{p}\), and \(\mathbf{r}\) is arbitrary, \((\mathbf{r}-\mathbf{p})\) could be any vector in the plane, and then this simply says that any vector lying in the plane must be perpendicular to \(\hat{\mathbf{n}}\). But most importantly for points to one side of the plane, we have</p>
 
-\[\hat{\mathbf{n}}\cdot(\mathbf{r}-\mathbf{p}) &amp;gt; 0,\]
+\[\hat{\mathbf{n}}\cdot(\mathbf{r}-\mathbf{p}) &gt; 0,\]
 
-&lt;p&gt;and to the other side we have&lt;/p&gt;
+<p>and to the other side we have</p>
 
-\[\hat{\mathbf{n}}\cdot(\mathbf{r}-\mathbf{p}) &amp;lt; 0.\]
+\[\hat{\mathbf{n}}\cdot(\mathbf{r}-\mathbf{p}) &lt; 0.\]
 
-&lt;p&gt;This behavior is just what we want to plug into some approximately binary function and model the classification problem. A good choice for a smooth approximately binary model is the logistic function:&lt;/p&gt;
+<p>This behavior is just what we want to plug into some approximately binary function and model the classification problem. A good choice for a smooth approximately binary model is the logistic function:</p>
 
 \[h(z) = \frac{1}{1+e^{-z}}.\]
 
-&lt;p&gt;Over most of the real line this function is approximately 0 (at \(z\to -\infty\)) or 1 (as \(z\to + \infty\)) and it “turns on” in the region near \(z=0\). If we let&lt;/p&gt;
+<p>Over most of the real line this function is approximately 0 (at \(z\to -\infty\)) or 1 (as \(z\to + \infty\)) and it “turns on” in the region near \(z=0\). If we let</p>
 
 \[z(\mathbf{r}) = \hat{\mathbf{n}}\cdot(\mathbf{r}-\mathbf{p}),\]
 
-&lt;p&gt;then we see that \(h(z(\mathbf{r}))\) will be approximately 0 to one side of the plane and 1 to the other.&lt;/p&gt;
+<p>then we see that \(h(z(\mathbf{r}))\) will be approximately 0 to one side of the plane and 1 to the other.</p>
 
-&lt;p&gt;Since we don’t know &lt;em&gt;a priori&lt;/em&gt; what \(\hat{\mathbf{n}}\) or \(\mathbf{p}\) should be (at least not without doing the computer’s job), we may as well call \(-\hat{\mathbf{n}}\cdot\mathbf{p} = \beta_0\). With these definitions&lt;/p&gt;
+<p>Since we don’t know <em>a priori</em> what \(\hat{\mathbf{n}}\) or \(\mathbf{p}\) should be (at least not without doing the computer’s job), we may as well call \(-\hat{\mathbf{n}}\cdot\mathbf{p} = \beta_0\). With these definitions</p>
 
 \[\hat{\mathbf{n}}\cdot(\mathbf{r}-\mathbf{p}) = \hat{\mathbf{n}}\cdot\mathbf{r}+\beta_0,\]
 
-&lt;p&gt;we see that the appropriate classifying function is&lt;/p&gt;
+<p>we see that the appropriate classifying function is</p>
 
 \[h(z) = \frac{1}{1+e^{-\hat{\mathbf{n}}\cdot\mathbf{r}-\beta_0}}.\]
 
-&lt;p&gt;One final modification is that we need to allow for the width of the turn on region to be adjusted. This means that we should allow the normal vector for the plane to be of any length, giving the usual form for the logistic function:&lt;/p&gt;
+<p>One final modification is that we need to allow for the width of the turn on region to be adjusted. This means that we should allow the normal vector for the plane to be of any length, giving the usual form for the logistic function:</p>
 
 \[h(\beta_i,x_i) = \frac{1}{1+e^{-\beta_0-\beta_i x_i}},\]
 
-&lt;p&gt;with Einstein summation over the spatial indices \(i\).&lt;/p&gt;
+<p>with Einstein summation over the spatial indices \(i\).</p>
 
-&lt;p&gt;Let’s see how this model performs using &lt;code class=&quot;highlighter-rouge&quot;&gt;lmfit&lt;/code&gt; to fit some clustered data generated with &lt;code class=&quot;highlighter-rouge&quot;&gt;scikit-learn&lt;/code&gt;:&lt;/p&gt;
+<p>Let’s see how this model performs using <code class="language-plaintext highlighter-rouge">lmfit</code> to fit some clustered data generated with <code class="language-plaintext highlighter-rouge">scikit-learn</code>:</p>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Data&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Fit&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/images/2d-category-data.png&quot; width=&quot;90%&quot; /&gt;&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/assets/images/2d-category-fit.png&quot; width=&quot;90%&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Madison Anderson</name></author><category term="data science" /><category term="fitting," /><category term="classification" /><summary type="html">Consider a binary classification problem where we have data consisting of 3 parameters, \(\{(x,y,z)_i\}\), and a binary variable \(q_i\), taking values of 0 or 1, where \(i\) takes values 1 to \(n\). For example, \((x,y,z)_j\) might represent the location of the \(j\)th person in an apartment complex and \(q_j\) might represent whether or not they test positive for an infectious disease. The data may be clustered or grouped with respect to the category, or it may not. Below is an example where the data exhibit two clusters:</summary></entry><entry><title type="html">MathJax setup</title><link href="http://localhost:4000/2020/04/24/MathJax.html" rel="alternate" type="text/html" title="MathJax setup" /><published>2020-04-24T00:00:00-04:00</published><updated>2020-04-24T00:00:00-04:00</updated><id>http://localhost:4000/2020/04/24/MathJax</id><content type="html" xml:base="http://localhost:4000/2020/04/24/MathJax.html">&lt;p&gt;MathJax renders LaTeX to CSS/webfonts/SVG for high quality web-typography. Here’s an inline equation,
-\(|\Phi^+\rangle = \frac{1}{\sqrt{2}} (|0\rangle_A \otimes |0\rangle_B + |1\rangle_A \otimes |1\rangle_B)\), and here’s a display-style equation:&lt;/p&gt;
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Data</th>
+      <th style="text-align: center">Fit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="/assets/images/2d-category-data.png" width="90%" /></td>
+      <td style="text-align: center"><img src="/assets/images/2d-category-fit.png" width="90%" /></td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>MJ Anderson</name></author><category term="data science" /><category term="fitting," /><category term="classification" /><summary type="html"><![CDATA[Consider a binary classification problem where we have data consisting of 3 parameters, \(\{(x,y,z)_i\}\), and a binary variable \(q_i\), taking values of 0 or 1, where \(i\) takes values 1 to \(n\). For example, \((x,y,z)_j\) might represent the location of the \(j\)th person in an apartment complex and \(q_j\) might represent whether or not they test positive for an infectious disease. The data may be clustered or grouped with respect to the category, or it may not. Below is an example where the data exhibit two clusters:]]></summary></entry><entry><title type="html">MathJax setup</title><link href="http://localhost:4000/2020/04/24/MathJax.html" rel="alternate" type="text/html" title="MathJax setup" /><published>2020-04-24T00:00:00-05:00</published><updated>2020-04-24T00:00:00-05:00</updated><id>http://localhost:4000/2020/04/24/MathJax</id><content type="html" xml:base="http://localhost:4000/2020/04/24/MathJax.html"><![CDATA[<p>MathJax renders LaTeX to CSS/webfonts/SVG for high quality web-typography. Here’s an inline equation,
+\(|\Phi^+\rangle = \frac{1}{\sqrt{2}} (|0\rangle_A \otimes |0\rangle_B + |1\rangle_A \otimes |1\rangle_B)\), and here’s a display-style equation:</p>
 
 \[R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}.\]
 
-&lt;p&gt;This post explains how to deploy MathJax within Jekyll. First, create &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/mathjax.html&lt;/code&gt;:&lt;/p&gt;
+<p>This post explains how to deploy MathJax within Jekyll. First, create <code class="language-plaintext highlighter-rouge">_includes/mathjax.html</code>:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{% if page.mathjax %}
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;async&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdnjs.clouwdflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-{% endif %}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% if page.mathjax %}
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">async</span>
+  <span class="na">src=</span><span class="s">"https://cdnjs.clouwdflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+{% endif %}</code></pre></figure>
 
-&lt;p&gt;Then include MathJax in a layout. Create &lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts/page.html&lt;/code&gt;:&lt;/p&gt;
+<p>Then include MathJax in a layout. Create <code class="language-plaintext highlighter-rouge">_layouts/page.html</code>:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-liquid&quot; data-lang=&quot;liquid&quot;&gt;---
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid">---
 layout: default
 mathjax: true
 ---
-&lt;span class=&quot;p&quot;&gt;{%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;mathjax.html&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>mathjax.html<span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{{</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="cp">}}</span></code></pre></figure>
 
-&lt;p&gt;You can now use &lt;code class=&quot;highlighter-rouge&quot;&gt;$$[...]$$&lt;/code&gt; for inline math and&lt;/p&gt;
+<p>You can now use <code class="language-plaintext highlighter-rouge">$$[...]$$</code> for inline math and</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-tex&quot; data-lang=&quot;tex&quot;&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;$$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-tex" data-lang="tex"><span class="p">$$</span><span class="o">[</span><span class="nb">...</span><span class="o">]</span><span class="p">$$</span></code></pre></figure>
 
-&lt;p&gt;for display-style math. That’s it!&lt;/p&gt;</content><author><name>Madison Anderson</name></author><summary type="html">MathJax renders LaTeX to CSS/webfonts/SVG for high quality web-typography. Here’s an inline equation, \(|\Phi^+\rangle = \frac{1}{\sqrt{2}} (|0\rangle_A \otimes |0\rangle_B + |1\rangle_A \otimes |1\rangle_B)\), and here’s a display-style equation:</summary></entry><entry><title type="html">Jekyll and Hyde(out) setup</title><link href="http://localhost:4000/2020/04/23/Jekyll.html" rel="alternate" type="text/html" title="Jekyll and Hyde(out) setup" /><published>2020-04-23T00:00:00-04:00</published><updated>2020-04-23T00:00:00-04:00</updated><id>http://localhost:4000/2020/04/23/Jekyll</id><content type="html" xml:base="http://localhost:4000/2020/04/23/Jekyll.html">&lt;p&gt;Jekyll is a ruby-based static site generator that’s perfect for small sites. This post outlines how I set up this site with Jekyll. For a detailed walkthrough, see the instructions on &lt;a href=&quot;https://jekyllrb.com/docs/installation/macos/&quot;&gt;jekyllrb.com&lt;/a&gt;.&lt;/p&gt;
+<p>for display-style math. That’s it!</p>]]></content><author><name>MJ Anderson</name></author><summary type="html"><![CDATA[MathJax renders LaTeX to CSS/webfonts/SVG for high quality web-typography. Here’s an inline equation, \(|\Phi^+\rangle = \frac{1}{\sqrt{2}} (|0\rangle_A \otimes |0\rangle_B + |1\rangle_A \otimes |1\rangle_B)\), and here’s a display-style equation:]]></summary></entry><entry><title type="html">Jekyll and Hyde(out) setup</title><link href="http://localhost:4000/2020/04/23/Jekyll.html" rel="alternate" type="text/html" title="Jekyll and Hyde(out) setup" /><published>2020-04-23T00:00:00-05:00</published><updated>2020-04-23T00:00:00-05:00</updated><id>http://localhost:4000/2020/04/23/Jekyll</id><content type="html" xml:base="http://localhost:4000/2020/04/23/Jekyll.html"><![CDATA[<p>Jekyll is a ruby-based static site generator that’s perfect for small sites. This post outlines how I set up this site with Jekyll. For a detailed walkthrough, see the instructions on <a href="https://jekyllrb.com/docs/installation/macos/">jekyllrb.com</a>.</p>
 
-&lt;p&gt;First, you’ll need to install Ruby, and make sure you have &amp;gt;2.5.0. Use &lt;a href=&quot;https://github.com/rbenv/rbenv&quot;&gt;rbenv&lt;/a&gt; if you need to manage multiple Ruby versions:&lt;/p&gt;
+<p>First, you’ll need to install Ruby, and make sure you have &gt;2.5.0. Use <a href="https://github.com/rbenv/rbenv">rbenv</a> if you need to manage multiple Ruby versions:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Install rbenv and ruby-build
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Install rbenv and ruby-build
 brew install rbenv
 
 # Set up rbenv integration with your shell
@@ -108,46 +108,46 @@ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor 
 # Install and use ruby 2.7.1
 rbenv install 2.7.1
 rbenv global 2.7.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Now install Jekyll and Bundler&lt;/p&gt;
+<p>Now install Jekyll and Bundler</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install --user-install bundler jekyll
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install --user-install bundler jekyll
+</code></pre></div></div>
 
-&lt;p&gt;Get your ruby version&lt;/p&gt;
+<p>Get your ruby version</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby -v
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
 ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;and add it to your path by adding the following to your shell configuration file, &lt;code class=&quot;highlighter-rouge&quot;&gt;.bash_profile&lt;/code&gt; or otherwise:&lt;/p&gt;
+<p>and add it to your path by adding the following to your shell configuration file, <code class="language-plaintext highlighter-rouge">.bash_profile</code> or otherwise:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export PATH=&quot;$HOME/.gem/ruby/X.X.0/bin:$PATH&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"
+</code></pre></div></div>
 
-&lt;p&gt;Finally, install Jekyll and Bundler:&lt;/p&gt;
+<p>Finally, install Jekyll and Bundler:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem install --user-install bundler jekyll
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install --user-install bundler jekyll
+</code></pre></div></div>
 
-&lt;h2 id=&quot;theme-setup&quot;&gt;Theme Setup&lt;/h2&gt;
+<h2 id="theme-setup">Theme Setup</h2>
 
-&lt;p&gt;Now you can fork the theme you want to use – for this site, I’m using &lt;a href=&quot;https://github.com/fongandrew/hydeout&quot;&gt;Hydeout&lt;/a&gt; – and download it so you can add your content.&lt;/p&gt;
+<p>Now you can fork the theme you want to use – for this site, I’m using <a href="https://github.com/fongandrew/hydeout">Hydeout</a> – and download it so you can add your content.</p>
 
-&lt;p&gt;In your project directory, create a Gemfile:&lt;/p&gt;
+<p>In your project directory, create a Gemfile:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle init
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle init
+</code></pre></div></div>
 
-&lt;p&gt;For Hydeout add &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-pageinate&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-gist&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-feed&lt;/code&gt; to your Gemfile and run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle update&lt;/code&gt; to install everything.&lt;/p&gt;
+<p>For Hydeout add <code class="language-plaintext highlighter-rouge">jekyll-pageinate</code>, <code class="language-plaintext highlighter-rouge">jekyll-gist</code> and <code class="language-plaintext highlighter-rouge">jekyll-feed</code> to your Gemfile and run <code class="language-plaintext highlighter-rouge">bundle install</code> and <code class="language-plaintext highlighter-rouge">bundle update</code> to install everything.</p>
 
-&lt;p&gt;Finally, to get Hydeout to work live, change your &lt;code class=&quot;highlighter-rouge&quot;&gt;baseurl:&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;http://[username].github.io&lt;/code&gt; if you’re using Github pages, or the correct domain name otherwise.&lt;/p&gt;
+<p>Finally, to get Hydeout to work live, change your <code class="language-plaintext highlighter-rouge">baseurl:</code> to <code class="language-plaintext highlighter-rouge">http://[username].github.io</code> if you’re using Github pages, or the correct domain name otherwise.</p>
 
-&lt;p&gt;You should now be able to build and run with Jekyll:&lt;/p&gt;
+<p>You should now be able to build and run with Jekyll:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
 jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Visit &lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt; to view your site!&lt;/p&gt;</content><author><name>Madison Anderson</name></author><summary type="html">Jekyll is a ruby-based static site generator that’s perfect for small sites. This post outlines how I set up this site with Jekyll. For a detailed walkthrough, see the instructions on jekyllrb.com.</summary></entry></feed>
+<p>Visit <a href="http://localhost:4000">http://localhost:4000</a> to view your site!</p>]]></content><author><name>MJ Anderson</name></author><summary type="html"><![CDATA[Jekyll is a ruby-based static site generator that’s perfect for small sites. This post outlines how I set up this site with Jekyll. For a detailed walkthrough, see the instructions on jekyllrb.com.]]></summary></entry></feed>
