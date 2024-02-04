@@ -6,7 +6,7 @@ highlighter:      rouge
 title:            Madison Anderson
 tagline:          'Project Blog'
 description:      'A place for thoughts and projects.'
-url:              https://mvdi.github.io
+url:              https://madi-lts.github.io
 baseurl:          '/'
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
@@ -15,7 +15,7 @@ baseurl:          '/'
                   # sidebar_blog_link below.
 
 author:
-  name:           'Madison Anderson'
+  name:           'MJ Anderson'
   url:
 
 paginate:         5
@@ -33,3 +33,10 @@ sidebar_home_link:  true
                                 # page. If you change your paginate_path,
                                 # set this to the root of the paginate_path
                                 # to enable a separate blog link.
+
+comments:
+  enabled: true
+  provider: disqus
+disqus: 
+  shortname: madi_lts
+
