@@ -8,7 +8,7 @@ tags: fitting, classification
 
 Consider a binary classification problem where we have data consisting of 3 parameters, $$\{(x,y,z)_i\}$$, and a binary variable $$q_i$$, taking values of 0 or 1, where $$i$$ takes values 1 to $$n$$. For example, $$(x,y,z)_j$$ might represent the location of the $$j$$th person in an apartment complex and $$q_j$$ might represent whether or not they test positive for an infectious disease. The data may be clustered or grouped with respect to the category, or it may not. Below is an example where the data exhibit two clusters:
 
-![2D classification data](/assets/images/2d-category-data.png)
+![2D classification data](/assets/images/2020-04-28/2d-category-data.png)
 
 A human can easily make a qualitative judgement and draw a line (or a plane) separating the infected and uninfected clusters. We would like to see if we can let our computer do this through a fitting routine.
 
@@ -52,4 +52,4 @@ Let's see how this model performs using `lmfit` to fit some clustered data gener
 
 Data | Fit
 :----:|:----:
-<img src="/assets/images/2d-category-data.png" width="90%">|<img src="/assets/images/2d-category-fit.png" width="90%">
+<img src="/assets/images/2020-04-28/2d-category-data.png" width="90%">|<img src="/assets/images/2020-04-28/2d-category-fit.png" width="90%">
