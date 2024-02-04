@@ -275,7 +275,7 @@
 <img src="/assets/images/2024-02-03/opencv-test.png" alt="opencv imshow()" />
 Note that the controls above allow us to pan, zoom, save, and copy the image to the clipboard.</p>
 
-<h2 id="cuda">CUDA</h2>
+<h2 id="building-cpu-and-cuda-code-with-make">Building CPU and CUDA code with Make</h2>
 <p>To integrate OpenCV with CUDA code, we could use the <code class="language-plaintext highlighter-rouge">nvcc</code> compiler and pass the same options as before:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvcc main.cu `pkg-config --cflags opencv4` `pkg-config --libs opencv4`
 </code></pre></div></div>
@@ -285,7 +285,7 @@ Note that the controls above allow us to pan, zoom, save, and copy the image to 
 <p>This will generate <code class="language-plaintext highlighter-rouge">cuda_code.o</code>, which we can then link using <code class="language-plaintext highlighter-rouge">g++</code>:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ -o program `pkg-config --cflags opencv4` `pkg-config --libs opencv4 cuda cudart` cuda_code.o main.cpp  
 </code></pre></div></div>
-<p>To streamline this process, use a Make. Create a file named <code class="language-plaintext highlighter-rouge">makefile</code>:</p>
+<p>To streamline the build process, use Make. Create a file named <code class="language-plaintext highlighter-rouge">makefile</code>:</p>
 <div class="language-make highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">all</span><span class="o">:</span> <span class="nf">program</span>
 
 <span class="nl">program</span><span class="o">:</span> <span class="nf">cuda_code.o</span>
@@ -301,6 +301,9 @@ Note that the controls above allow us to pan, zoom, save, and copy the image to 
 <p>The indentation in the <code class="language-plaintext highlighter-rouge">makefile</code> must be done with tabs, and every line must have an end of line character. 
 So make sure to convert spaces to tabs in your text editor. Also note the <code class="language-plaintext highlighter-rouge">-I.</code> flag which tells <code class="language-plaintext highlighter-rouge">g++</code> to look
 in the current directory.</p>
+
+<h2 id="cmake">CMake</h2>
+<p>Building with Make is a platform specific process. To generalize our build instructions to multiple platforms, we can use CMake.</p>
 
     
 

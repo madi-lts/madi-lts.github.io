@@ -46,7 +46,7 @@ OpenCV's `imshow()` displays the image in a GUI window:
 ![opencv imshow()](/assets/images/2024-02-03/opencv-test.png)
 Note that the controls above allow us to pan, zoom, save, and copy the image to the clipboard.
 
-## CUDA
+## Building CPU and CUDA code with Make
 To integrate OpenCV with CUDA code, we could use the `nvcc` compiler and pass the same options as before:
 ```
 nvcc main.cu `pkg-config --cflags opencv4` `pkg-config --libs opencv4`
@@ -59,7 +59,7 @@ This will generate `cuda_code.o`, which we can then link using `g++`:
 ```
 g++ -o program `pkg-config --cflags opencv4` `pkg-config --libs opencv4 cuda cudart` cuda_code.o main.cpp  
 ```
-To streamline this process, use a Make. Create a file named `makefile`:
+To streamline the build process, use Make. Create a file named `makefile`:
 ```make
 all: program
 
@@ -76,3 +76,6 @@ clean:
 The indentation in the `makefile` must be done with tabs, and every line must have an end of line character. 
 So make sure to convert spaces to tabs in your text editor. Also note the `-I.` flag which tells `g++` to look
 in the current directory.
+
+## CMake
+Building with Make is a platform specific process. To generalize our build instructions to multiple platforms, we can use CMake.
