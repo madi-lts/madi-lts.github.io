@@ -11,7 +11,7 @@
 
   <title>
     
-      Arch Linux Installation &middot; madi-lts
+      OpenCV with C++ and CUDA &middot; madi-lts
     
   </title>
 
@@ -104,6 +104,10 @@
 
   
 
+  
+    
+  
+
 
   
 
@@ -144,6 +148,10 @@
     
   
 
+  
+
+  
+    
   
 
 
@@ -207,7 +215,7 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">Arch Linux Installation</h1>
+  <h1 class="post-title">OpenCV with C++ and CUDA</h1>
 </header>
 <div class="content">
   <div class="post-meta">
@@ -221,7 +229,7 @@
       
 
       
-        linux
+        c++
       
     
   </span>
@@ -229,7 +237,9 @@
 
 
   <div class="post-body">
-    <p>Recently I switched from Windows back to linux for various C++ and CUDA development purposes. For a distro, I chose Arch, which I ended up installing on both my desktop and laptop. Here is my manual installation procedure, and current setup with Gnome 45</p>
+    <p>First install opencv. On arch linux, you may also need to install vtk, glew, and fmt. To compile and link a program:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ main.cpp `pkg-config --cflags opencv4` `pkg-config --libs opencv4` 
+</code></pre></div></div>
 
     
 
@@ -238,36 +248,36 @@
 <div class="post-tags">
   
     
-    <a href="/tags.html#arch">
+    <a href="/tags.html#c">
     
       <span class="icon">
         <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
 </svg>
-      </span>&nbsp;<span class="tag-name">arch,</span>
+      </span>&nbsp;<span class="tag-name">c++,</span>
     </a>
   
     
-    <a href="/tags.html#linux">
+    <a href="/tags.html#opencv">
     
       <span class="icon">
         <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
 </svg>
-      </span>&nbsp;<span class="tag-name">linux,</span>
+      </span>&nbsp;<span class="tag-name">opencv,</span>
     </a>
   
     
-    <a href="/tags.html#gnome">
+    <a href="/tags.html#cuda">
     
       <span class="icon">
         <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
 </svg>
-      </span>&nbsp;<span class="tag-name">gnome</span>
+      </span>&nbsp;<span class="tag-name">CUDA</span>
     </a>
   
 </div>
@@ -332,6 +342,15 @@
     
       <li>
         <h3>
+          <a href="/linux/2024/02/02/Arch-Linux-Installation.html">
+            Arch Linux Installation
+            <small>02 Feb 2024</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/data%20science/2020/04/28/Logistic-Regression.html">
             Logistic Regression
             <small>28 Apr 2020</small>
@@ -344,15 +363,6 @@
           <a href="/data%20science/2020/04/28/Jupyter-Kernels.html">
             Jupyter Kernel
             <small>28 Apr 2020</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2020/04/24/MathJax.html">
-            MathJax setup
-            <small>24 Apr 2020</small>
           </a>
         </h3>
       </li>

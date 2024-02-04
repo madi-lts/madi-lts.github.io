@@ -11,7 +11,7 @@
 
   <title>
     
-      Jekyll and Hyde(out) setup &middot; madi-lts
+      Arch Linux Installation &middot; madi-lts
     
   </title>
 
@@ -35,6 +35,10 @@
 </head>
 
   
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 
   <body class="post">
 
@@ -211,83 +215,68 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">Jekyll and Hyde(out) setup</h1>
+  <h1 class="post-title">Arch Linux Installation</h1>
 </header>
 <div class="content">
   <div class="post-meta">
-  <span class="post-date">23 Apr 2020</span>
+  <span class="post-date">02 Feb 2024</span>
   <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        linux
+      
     
   </span>
 </div>
 
 
   <div class="post-body">
-    <p>Jekyll is a ruby-based static site generator that’s perfect for small sites. This post outlines how I set up this site with Jekyll. For a detailed walkthrough, see the instructions on <a href="https://jekyllrb.com/docs/installation/macos/">jekyllrb.com</a>.</p>
-
-<p>First, you’ll need to install Ruby, and make sure you have &gt;2.5.0. Use <a href="https://github.com/rbenv/rbenv">rbenv</a> if you need to manage multiple Ruby versions:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Install rbenv and ruby-build
-brew install rbenv
-
-# Set up rbenv integration with your shell
-rbenv init
-
-# Check your installation
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
-
-# Install and use ruby 2.7.1
-rbenv install 2.7.1
-rbenv global 2.7.1
-</code></pre></div></div>
-
-<p>Now install Jekyll and Bundler</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install --user-install bundler jekyll
-</code></pre></div></div>
-
-<p>Get your ruby version</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
-ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c)
-</code></pre></div></div>
-
-<p>and add it to your path by adding the following to your shell configuration file, <code class="language-plaintext highlighter-rouge">.bash_profile</code> or otherwise:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"
-</code></pre></div></div>
-
-<p>Finally, install Jekyll and Bundler:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install --user-install bundler jekyll
-</code></pre></div></div>
-
-<h2 id="theme-setup">Theme Setup</h2>
-
-<p>Now you can fork the theme you want to use – for this site, I’m using <a href="https://github.com/fongandrew/hydeout">Hydeout</a> – and download it so you can add your content.</p>
-
-<p>In your project directory, create a Gemfile:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle init
-</code></pre></div></div>
-
-<p>For Hydeout add <code class="language-plaintext highlighter-rouge">jekyll-pageinate</code>, <code class="language-plaintext highlighter-rouge">jekyll-gist</code> and <code class="language-plaintext highlighter-rouge">jekyll-feed</code> to your Gemfile and run <code class="language-plaintext highlighter-rouge">bundle install</code> and <code class="language-plaintext highlighter-rouge">bundle update</code> to install everything.</p>
-
-<p>Finally, to get Hydeout to work live, change your <code class="language-plaintext highlighter-rouge">baseurl:</code> to <code class="language-plaintext highlighter-rouge">http://[username].github.io</code> if you’re using Github pages, or the correct domain name otherwise.</p>
-
-<p>You should now be able to build and run with Jekyll:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
-jekyll serve
-</code></pre></div></div>
-
-<p>Visit <a href="http://localhost:4000">http://localhost:4000</a> to view your site!</p>
+    <p>Recently I switched from Windows back to linux for various C++ and CUDA development purposes. For a distro, I chose Arch, which I ended up installing on both my desktop and laptop. Here is my manual installation procedure, and current setup with Gnome 45</p>
 
     
 
 
 
 <div class="post-tags">
+  
+    
+    <a href="/tags.html#arch">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">arch,</span>
+    </a>
+  
+    
+    <a href="/tags.html#linux">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">linux,</span>
+    </a>
+  
+    
+    <a href="/tags.html#gnome">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">gnome</span>
+    </a>
   
 </div>
   </div>
@@ -360,17 +349,17 @@ jekyll serve
     
       <li>
         <h3>
-          <a href="/linux/2024/02/02/Arch-Linux-Installation.html">
-            Arch Linux Installation
-            <small>02 Feb 2024</small>
+          <a href="/data%20science/2020/04/28/Logistic-Regression.html">
+            Logistic Regression
+            <small>28 Apr 2020</small>
           </a>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/data%20science/2020/04/28/Logistic-Regression.html">
-            Logistic Regression
+          <a href="/data%20science/2020/04/28/Jupyter-Kernels.html">
+            Jupyter Kernel
             <small>28 Apr 2020</small>
           </a>
         </h3>
