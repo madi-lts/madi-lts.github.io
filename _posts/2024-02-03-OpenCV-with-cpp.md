@@ -6,7 +6,7 @@ mathjax: true
 tags: c++, opencv, CUDA
 ---
 
-First install `opencv`. On arch linux, you may also need to install `vtk`, `glew`, and `fmt`. To compile and link a program:
+First install `opencv`. On arch linux, you may also need to install `vtk`, `glew`, and `fmt`. You also need `qt6-base`, `hdf5`, and possibly more! Scan the output of `ld` the see what dependencies are missing. To compile and link a program:
 ```
 g++ main.cpp `pkg-config --cflags opencv4` `pkg-config --libs opencv4` 
 ```
