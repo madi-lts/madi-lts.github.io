@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OpenCV with C++ and CUDA
-category: c++
+category: c++, CUDA
 mathjax: true
 tags: c++, opencv, CUDA
 ---
