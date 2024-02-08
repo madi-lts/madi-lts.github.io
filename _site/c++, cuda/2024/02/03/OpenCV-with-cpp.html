@@ -229,7 +229,7 @@
       
 
       
-        c++
+        c++, CUDA
       
     
   </span>
@@ -237,7 +237,7 @@
 
 
   <div class="post-body">
-    <p>First install <code class="language-plaintext highlighter-rouge">opencv</code>. On arch linux, you may also need to install <code class="language-plaintext highlighter-rouge">vtk</code>, <code class="language-plaintext highlighter-rouge">glew</code>, and <code class="language-plaintext highlighter-rouge">fmt</code>. To compile and link a program:</p>
+    <p>First install <code class="language-plaintext highlighter-rouge">opencv</code>. On arch linux, you may also need to install <code class="language-plaintext highlighter-rouge">vtk</code>, <code class="language-plaintext highlighter-rouge">glew</code>, and <code class="language-plaintext highlighter-rouge">fmt</code>. You also need <code class="language-plaintext highlighter-rouge">qt6-base</code>, <code class="language-plaintext highlighter-rouge">hdf5</code>, and possibly more! Scan the output of <code class="language-plaintext highlighter-rouge">ld</code> the see what dependencies are missing. To compile and link a program:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ main.cpp `pkg-config --cflags opencv4` `pkg-config --libs opencv4` 
 </code></pre></div></div>
 <p>For a first program, let’s display an 8-bit monochrome image of white noise:</p>
@@ -304,6 +304,23 @@ in the current directory.</p>
 
 <h2 id="cmake">CMake</h2>
 <p>Building with Make is a platform specific process. To generalize our build instructions to multiple platforms, we can use CMake.</p>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cmake_minimum_required</span><span class="p">(</span>VERSION 3.28.0<span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span>PROJECT_NAME project.out<span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span><span class="si">${</span><span class="nv">PROJECT_NAME</span><span class="si">}</span>
+	VERSION 1.0 
+	LANGUAGES CXX<span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span>CMAKE_CXX_STANDARD 20<span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span>CMAKE_CXX_STANDARD_REQUIRED True<span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span>CMAKE_CXX_EXTENSIONS ON<span class="p">)</span>
+
+<span class="nb">find_package</span><span class="p">(</span>OpenCV REQUIRED<span class="p">)</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="si">${</span><span class="nv">PROJECT_NAME</span><span class="si">}</span> main.cpp<span class="p">)</span>
+<span class="nb">target_include_directories</span><span class="p">(</span><span class="si">${</span><span class="nv">PROJECT_NAME</span><span class="si">}</span> PUBLIC ./<span class="p">)</span>	
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="si">${</span><span class="nv">PROJECT_NAME</span><span class="si">}</span> <span class="si">${</span><span class="nv">OpenCV_LIBS</span><span class="si">}</span><span class="p">)</span>
+</code></pre></div></div>
 
     
 
