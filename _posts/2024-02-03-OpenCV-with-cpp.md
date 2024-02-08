@@ -79,3 +79,21 @@ in the current directory.
 
 ## CMake
 Building with Make is a platform specific process. To generalize our build instructions to multiple platforms, we can use CMake.
+
+```cmake
+cmake_minimum_required(VERSION 3.28.0)
+set(PROJECT_NAME project.out)
+project(${PROJECT_NAME}
+	VERSION 1.0 
+	LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_EXTENSIONS ON)
+
+find_package(OpenCV REQUIRED)
+
+add_executable(${PROJECT_NAME} main.cpp)
+target_include_directories(${PROJECT_NAME} PUBLIC ./)	
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
+```
